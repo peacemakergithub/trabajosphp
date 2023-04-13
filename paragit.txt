@@ -1,0 +1,6 @@
+ 
+ git config --global user.email alche_2341@hotmail.com
+
+
+
+ git config --global user.name pacificadorgithub
