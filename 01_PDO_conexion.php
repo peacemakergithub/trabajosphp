@@ -1,18 +1,21 @@
 <?php
+if($_POST){
+$Filtrar = $_POST['Idproducto'];
 $servidor="localhost";
 $usuario="root";
 $contraseña="";
 $bd="matricula";
+
 
 try {
 
     $conexion = new PDO("mysql:host=$servidor; dbname=$bd", $usuario, $contraseña);
     $conexion->setAttribute(PDO::ATTR_ERRMODE, PDO::ERRMODE_EXCEPTION);
     $conexion->exec("SET CHARACTER SET utf8");
-    $sql = "select Id_Producto,Nomb_Producto, Desc_Producto, Prec_Producto, Cant_Producto from productos ";
+    $sql = "select Id_Producto,Nomb_Producto, Desc_Producto, Prec_Producto, Cant_Producto FROM productos where Id_Producto =? ";
 
     $resultado = $conexion->prepare($sql);
-    $resultado->execute();
+    $resultado->execute(array($Filtrar));
 
     while($registro=$resultado->fetch(PDO::FETCH_ASSOC)){
          echo "Id     : ". $registro['Id_Producto'].
@@ -33,7 +36,7 @@ try {
     
     }
     
-    
+}
     
     
     ?>
