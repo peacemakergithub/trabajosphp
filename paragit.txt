@@ -1,6 +1,11 @@
  
  git config --global user.email alche_2341@hotmail.com
-
+ 
+Id_Producto INT NOT NULL PRIMARY  KEY AUTO_INCREMENT ,
+-- Nomb_Producto VARCHAR (50) NOT NULL ,productos	
+-- Desc_Producto VARCHAR (50),
+-- Prec_Producto DECIMAL (10,2),
+-- Cant_Producto int
 
 
  git config --global user.name pacificadorgithub

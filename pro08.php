@@ -38,8 +38,8 @@ class trabajador extends persona{
 $a = new  trabajador();
 $a -> setnombre("Fernando");
 $a -> setedad(22);
-$a-> setpuesto("Programador");
-$a-> imprimirTrabajo();
+$a -> setpuesto("Programador");
+$a -> imprimirTrabajo();
 echo $a->getnombre();
 
 ?>
